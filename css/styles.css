@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Nav bar */
+header {
+  background-color: #29323e;
+  border: 2px solid green;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Main Content */
+
+main {
+  width: 100%;
+  margin: auto;
+  padding: 0 2%;
+}
+
+.content-boxes {
+  /*border: 2px solid red;*/
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.content-box {
+  /*border: 1px solid blue;*/
+  width: 24%;
+  height: 373px;
+  margin: 0 1% 1% 0;
+}
+
+.box-header {
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+  height: 133px;
+}
+
+.box-body {
+  width: 100%;
+  border: 1px solid red;
+  height: 239px;
+}
+
+img {
+  width: 100%;
+}
