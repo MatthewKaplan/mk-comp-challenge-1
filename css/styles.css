@@ -1,102 +1,230 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
   background-color: #F7F7F7;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
-/* Nav bar */
+/*------- Nav bar ---------*/
 header {
   background-color: #29323e;
-  height: 102px;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+  padding-top: 5px;
 }
 
-ul {
-  list-style: none;
+.web-page-logo {
+  align-items: center;
+  display: flex;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 0px 20px 0px 20px;
 }
 
 .left-nav-bar {
   display: flex;
   justify-content: space-between;
-  color: red;
-  width: 45%;
-  margin-top: 25px;
+  list-style: none;
+  padding: 0;
+  width: 50vw;
 }
 
-.right-nav-bar {
+.shares-icon,
+.playlists-icon,
+.personal-videos-icon,
+.admin-icon {
   display: flex;
-  color: red;
-  justify-content: flex-end;
-  margin: 0px;
-  padding-top: 10px;
-  padding-right: 25px;
+  justify-content: space-around;
 }
 
-/* Main Content */
+.fas,
+.far,
+.fab,
+.align-admin p {
+  color: pink;
+}
+
+.shares {
+  color: white;
+}
+
+.playlists,
+.personal-videos,
+.logo-name {
+  color: grey;
+}
+
+.admin {
+  color: lightblue;
+}
+
+/*---------- Main Content ---------*/
 
 main {
-  width: 100%;
-  margin: auto;
-  padding: 0 2%;
+  margin-left: 10px;
+  margin: 0;
+  min-height: 900px;
+  padding: 0;
 }
 
 .content-boxes {
-  /*border: 2px solid red;*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-left: 10px;
 }
 
 .content-box {
-  /*border: 1px solid blue;*/
-  width: 24%;
-  height: 373px;
   margin: 0 1% 1% 0;
-  background-color: white;
+  max-width: 370px;
+  min-width: 250px;
+  width: 24%;
+}
+
+.fa-user-ninja {
+  color: white;
+  margin: 16px 0 16px 0;
+  padding-right: 10px;
+}
+
+.fa-sort-down {
+  margin: 16px 0 16px 0;
+  padding-left: 10px;
+}
+
+.align-admin {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 40px;
+  width: 100%;
+}
+
+.fa-backward {
+  color: white;
+}
+
+.fa-backward,
+.fa-archive,
+.fa-play-circle {
+  padding-right: 10px;
 }
 
 .box-header {
-  width: 100%;
+  height: 150px;
+}
+
+section.picture-icon {
   display: flex;
-  border: none;
-  height: 133px;
+  justify-content: space-between;
+  padding: 10px 8%;
+}
+
+div.img-text {
+  align-items: flex-start;
+  height: 50px;
+}
+
+.monthly-listeners,
+.listeners-number {
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.monthly-listeners {
+  font-weight: 300;
+}
+
+.listeners-number {
+  font-weight: 800;
+}
+
+i:hover {
+  color: deeppink;
+  cursor: pointer;
+}
+
+.img-1 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/phish.gif');
+  background-size: cover;
+}
+
+.img-2 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/gratefuldead.jpg');
+  background-size: cover;
+}
+
+.img-3 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/talkingheads.jpg');
+  background-size: cover;
+}
+
+.img-4 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/stringcheese.jpg');
+  background-size: cover;
+}
+
+.img-5 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/moe.jpg');
+  background-size: cover;
+}
+
+.img-6 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/allmanbrothers.jpg');
+  background-size: cover;
+}
+
+.img-7 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/velvetunderground.jpg');
+  background-size: cover;
+}
+
+.img-8 {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/umphreys.jpg');
+  background-size: cover;
 }
 
 .box-body {
-  width: 100%;
-  border: none;
-  height: 239px;
-  padding: 1em;
   -moz-box-shadow:    0 0 3px .5px rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 3px .5px rgba(0, 0, 0, 0.35);
+  border: none;
   box-shadow:         0 0 3px .5px rgba(0, 0, 0, 0.35);
-/*  display: flex;
-  flex-direction: column;
-  justify-content: space-between;*/
+  height: 239px;
+  padding: 1em;
+  width: 100%;
 }
 
 .page-title,
 .years-active,
 .band-name,
-.band-members,
+.band-rank,
 .band-active,
 .band-origin,
 .band-origin,
-.band,
+.rank,
 .origin {
+  line-height: 1;
   margin: 0;
   padding: 0;
-  line-height: 1;
 }
 
 .page-title {
-  padding: 32px 0 ;
   font-size: 32px;
   font-weight: 400;
+  padding: 32px 0;
+  margin-left: 10px;
 }
 
 .band-name {
@@ -110,35 +238,127 @@ main {
 }
 
 .band-link {
-  margin: 11px 1px;
   background-color: lightgrey;
-  height: 20px;
+  height: 48px;
+  margin: 19px 1px;
 }
 
 .band-link a {
-  color: black;
+  color: grey;
+  font-size: 10px;
+  font-size: 11px;
   text-decoration: none;
-  padding-left: 25px;
+  width: 100%;
+}
+
+.align-anchor {
+  padding: 5px 10px;
 }
 
 .origin {
-  padding-bottom: .3em;
   font-weight: 300;
+  padding-bottom: .3em;
+  text-transform: uppercase;
 }
 
 .band-origin {
-  padding-bottom: 1em;
   font-weight: 300;
+  padding-bottom: 1em;
 }
 
-.band {
-  text-transform: uppercase;
-  font-weight: 400;
+.rank {
   font-size: 11px;
-  padding-bottom: 3px;
+  font-weight: 400;
   margin: 0;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.band-rank {
+  color: lightblue;
+  font-size: 2em;
+  font-weight: 300;
 }
 
 .band-img {
   width: 100%;
+}
+
+/*------- Media Quries ---------*/
+
+@media (max-width: 620px) {
+  nav {
+  flex-direction: column;
+  margin: 0;
+  }
+
+  header {
+    height: 225px;
+    padding-top: 0;
+  }
+
+  .fa-backward,
+  .fa-archive,
+  .fa-play-circle {
+    visibility: hidden;
+  }
+
+  .left-nav-bar {
+    flex-direction: column;
+  }
+
+  .shares-icon,
+  .playlists-icon,
+  .personal-videos-icon {
+    border: 1px solid grey;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .shares-icon,
+  .playlists-icon,
+  .personal-videos-icon:hover {
+    cursor: pointer;
+  }
+
+  .align-admin {
+  display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    height: 275px;
+    padding-top: 0;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .shares-icon,
+  .playlists-icon,
+  .personal-videos-icon {
+    padding-right: 50px;
+    padding-right: 50px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    height: 300px;
+    padding-top: 0;
+  }
+
+  .content-box {
+    margin-bottom: 10px;
+  }
+
+  .shares-icon,
+  .playlists-icon,
+  .personal-videos-icon {
+    text-align: center;
+  }
 }
